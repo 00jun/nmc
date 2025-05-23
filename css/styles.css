@@ -146,13 +146,13 @@
     width: 100%;
     padding: 1.5rem;
     text-align: center;
-    background-color: white;
-    border-top: 1px solid #e0e0e0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: auto;
   }
   
   .new-footer p {
-    color: black;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.85rem;
     font-weight: 300;
     margin: 0;
