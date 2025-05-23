@@ -59,6 +59,33 @@
     z-index: 1;
   }
   
+  .title::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: conic-gradient(
+      from 0deg,
+      rgba(106, 17, 203, 0.1),
+      rgba(37, 117, 252, 0.1),
+      rgba(252, 70, 107, 0.1),
+      rgba(255, 154, 158, 0.1),
+      rgba(106, 17, 203, 0.1)
+    );
+    border-radius: 50%;
+    z-index: -2;
+    animation: rotateGlow 15s linear infinite;
+    opacity: 0.6;
+    filter: blur(15px);
+  }
+  
+  @keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
   .title::after {
     content: "";
     position: absolute;
