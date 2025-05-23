@@ -41,7 +41,7 @@
     align-items: center;
     flex: 1;
     margin: 0 auto;
-    padding-top: 2rem;
+    padding-top: 4rem;
   }
   
   .title {
@@ -629,7 +629,7 @@
     
     .container {
       padding: 1rem;
-      padding-top: 3.5rem;
+      padding-top: 2.5rem;
     }
     
     .new-footer p {
@@ -744,7 +744,7 @@
     }
     
     .container {
-      padding-top: 2rem;
+      padding-top: 1.5rem;
     }
     
     /* 작은 화면에서 카드 라벨 조정 */
@@ -830,7 +830,7 @@
     }
     
     .container {
-      padding-top: 2rem;
+      padding-top: 1rem;
     }
     
     /* 초소형 화면에서 카드 라벨 조정 */
