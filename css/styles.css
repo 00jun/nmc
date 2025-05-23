@@ -51,26 +51,38 @@
     margin: 2rem 0 1rem;
     text-align: center;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(45deg, 
-      #ff9a9e 0%, 
-      #fad0c4 15%, 
-      #fbc2eb 30%, 
-      #a18cd1 45%, 
-      #6a11cb 60%,
-      #fc466b 75%,
-      #ff9a9e 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-size: 300% auto;
-    animation: gradientText 10s ease infinite;
+    color: #ffffff;
+    text-shadow: 
+      0 2px 4px rgba(0, 0, 0, 0.3),
+      0 4px 8px rgba(106, 17, 203, 0.2);
+    position: relative;
+    z-index: 1;
   }
   
-  @keyframes gradientText {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  .title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+      rgba(106, 17, 203, 0.1) 0%, 
+      rgba(37, 117, 252, 0.1) 33%, 
+      rgba(252, 70, 107, 0.1) 66%, 
+      rgba(106, 17, 203, 0.1) 100%);
+    filter: blur(8px);
+    z-index: -1;
+    opacity: 0.5;
+    animation: subtleGlow 10s ease infinite;
+    border-radius: 10px;
+    transform: scale(1.03);
+  }
+  
+  @keyframes subtleGlow {
+    0% { opacity: 0.3; transform: scale(1.02); }
+    50% { opacity: 0.5; transform: scale(1.04); }
+    100% { opacity: 0.3; transform: scale(1.02); }
   }
   
   .subtitle {
@@ -575,7 +587,6 @@
     .title {
       font-size: 2.8rem;
       margin: 1.5rem 0 1rem;
-      background-size: 200% auto;
     }
     
     .subtitle {
@@ -676,7 +687,6 @@
       font-size: 2.2rem;
       margin: 1rem 0 1rem;
       letter-spacing: 0.5px;
-      background-size: 200% auto;
     }
     
     .subtitle {
@@ -773,7 +783,6 @@
       font-size: 1.8rem;
       margin: 0.8rem 0 0.8rem;
       letter-spacing: 0.3px;
-      background-size: 150% auto;
     }
     
     .subtitle {
